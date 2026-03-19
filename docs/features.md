@@ -1,136 +1,13 @@
-# avion-client-react
+# Features
 
-## Overview
+## Feature Inventory Overview
 
 - Repository: `avion-client-react`
 - Category: `frontend`
-- Runtime: `Node.js`
-- Primary framework: `React`
-- Rendering or execution model: `Single-page application style client runtime`
-- Package manager metadata: `pnpm@10.7.1`
-- Root directories discovered: `4`
-- Root files discovered: `17`
-- Declared runtime dependencies: `13`
-- Declared development dependencies: `28`
-- Declared scripts: `6`
+- This file inventories routes, modules, services, state containers, UI surfaces, and supporting implementation files.
+- The grouping is derived from folder names and file paths rather than undocumented assumptions about runtime behavior.
 
-## Repository Summary
-
-- `avion-client-react` is documented from the files present in this repository only.
-- This README intentionally avoids assumptions when implementation details are not explicit.
-- Paths, dependencies, scripts, and configuration notes below are derived from the current repository tree.
-- Unknown or partially confirmed areas are called out explicitly instead of being filled with guesses.
-
-## Script Reference
-
-- `dev`: `vite`
-- `build`: `tsc -b && vite build`
-- `preview`: `vite preview`
-- `lint`: `eslint . --fix`
-- `format`: `prettier --write "src/**/*.{js,ts,tsx,jsx,json,css,md}"`
-- `clean`: `rimraf ./dist`
-
-## Top-Level Directories
-
-- `.github/`
-- `docs/`
-- `public/`
-- `src/`
-
-## Top-Level Files
-
-- `.gitignore`
-- `.npmrc`
-- `.prettierrc`
-- `DOCS.md`
-- `LICENSE.txt`
-- `README.md`
-- `env.d.ts`
-- `index.html`
-- `package.json`
-- `pnpm-lock.yaml`
-- `pnpm-workspace.yaml`
-- `postcss.config.js`
-- `tailwind.config.ts`
-- `tsconfig.json`
-- `tsconfig.tsbuildinfo`
-- `vercel.json`
-- `vite.config.ts`
-
-## Runtime Dependencies
-
-- `axios`
-- `clsx`
-- `react`
-- `react-dom`
-- `react-error-boundary`
-- `react-hook-form`
-- `react-hot-toast`
-- `react-redux`
-- `react-responsive`
-- `react-router-dom`
-- `reselect`
-- `tailwind-merge`
-- `zod`
-
-## Development Dependencies
-
-- `@eslint/js`
-- `@hookform/resolvers`
-- `@reduxjs/toolkit`
-- `@types/node`
-- `@types/react`
-- `@types/react-dom`
-- `@types/react-redux`
-- `@types/react-router-dom`
-- `@typescript-eslint/eslint-plugin`
-- `@typescript-eslint/parser`
-- `@vitejs/plugin-react`
-- `@vitejs/plugin-react-swc`
-- `autoprefixer`
-- `eslint`
-- `eslint-config-prettier`
-- `eslint-plugin-prettier`
-- `eslint-plugin-react`
-- `eslint-plugin-react-hooks`
-- `eslint-plugin-react-refresh`
-- `globals`
-- `postcss`
-- `prettier`
-- `prettier-plugin-tailwindcss`
-- `rimraf`
-- `tailwindcss`
-- `typescript`
-- `typescript-eslint`
-- `vite`
-
-## Environment Variable References
-
-- `MONGO_URI`
-- `NODE_ENV`
-- `VITE_BACKEND_URL`
-- `VITE_BASE_PATH`
-
-## Integration Notes
-
-- Axios is declared for HTTP calls
-- Zod validation is declared
-- React Redux is declared
-
-## Authentication Notes
-
-- Repository contains auth-related source files or routes
-
-## Database And Storage Notes
-
-- Confirmed database/storage implementation is not fully documented in the scanned files
-
-## Primary Source Areas
-
-- `src/` is present
-- `public/` is present
-
-## Route And Entry Inventory
+## Route, Page, And Endpoint Files
 
 - `src/routes/About.tsx`
 - `src/routes/Category.tsx`
@@ -148,46 +25,7 @@
 - `src/services/api/catalog/images.ts`
 - `src/services/api/catalog/index.ts`
 
-## Service And Data Inventory
-
-- `src/services/db/dbClients.ts`
-- `src/services/db/index.ts`
-- `src/services/db/models/Products.ts`
-- `src/services/db/repositories/ProductRepository.ts`
-
-## State, Hook, Or Provider Inventory
-
-- `src/hooks/TrackBreakPointsTW.tsx`
-- `src/hooks/useAuth.ts`
-- `src/hooks/useCart.ts`
-- `src/hooks/useDebouncedSearch.ts`
-- `src/stores/auth/index.ts`
-- `src/stores/auth/selectors.ts`
-- `src/stores/auth/slice.ts`
-- `src/stores/auth/thunks.ts`
-- `src/stores/cart/index.ts`
-- `src/stores/cart/selectors.ts`
-- `src/stores/cart/slice.ts`
-- `src/stores/cart/thunks.ts`
-- `src/stores/core/hooks.ts`
-- `src/stores/core/rootReducer.ts`
-- `src/stores/core/store.ts`
-- `src/stores/modal/index.ts`
-- `src/stores/modal/selectors.ts`
-- `src/stores/modal/slice.ts`
-- `src/stores/modal/thunks.ts`
-- `src/stores/products/index.ts`
-- `src/stores/products/selectors.ts`
-- `src/stores/products/slice.ts`
-- `src/stores/products/thunks.ts`
-- `src/stores/search/index.ts`
-- `src/stores/search/selectors.ts`
-- `src/stores/search/slice.ts`
-- `src/stores/user/selectors.ts`
-- `src/stores/user/slice.ts`
-- `src/stores/user/thunks.ts`
-
-## UI, Module, Or Feature Inventory
+## UI, Module, Feature, And Layout Files
 
 - `src/components/badges/AvatarBadge.tsx`
 - `src/components/badges/CartBadge.tsx`
@@ -243,7 +81,46 @@
 - `src/sections/UniqueSection.tsx`
 - `src/sections/WhatsMake.tsx`
 
-## Config, Schema, And Tooling Inventory
+## Service, Data, And Library Files
+
+- `src/services/db/dbClients.ts`
+- `src/services/db/index.ts`
+- `src/services/db/models/Products.ts`
+- `src/services/db/repositories/ProductRepository.ts`
+
+## State, Hook, Provider, And Middleware Files
+
+- `src/hooks/TrackBreakPointsTW.tsx`
+- `src/hooks/useAuth.ts`
+- `src/hooks/useCart.ts`
+- `src/hooks/useDebouncedSearch.ts`
+- `src/stores/auth/index.ts`
+- `src/stores/auth/selectors.ts`
+- `src/stores/auth/slice.ts`
+- `src/stores/auth/thunks.ts`
+- `src/stores/cart/index.ts`
+- `src/stores/cart/selectors.ts`
+- `src/stores/cart/slice.ts`
+- `src/stores/cart/thunks.ts`
+- `src/stores/core/hooks.ts`
+- `src/stores/core/rootReducer.ts`
+- `src/stores/core/store.ts`
+- `src/stores/modal/index.ts`
+- `src/stores/modal/selectors.ts`
+- `src/stores/modal/slice.ts`
+- `src/stores/modal/thunks.ts`
+- `src/stores/products/index.ts`
+- `src/stores/products/selectors.ts`
+- `src/stores/products/slice.ts`
+- `src/stores/products/thunks.ts`
+- `src/stores/search/index.ts`
+- `src/stores/search/selectors.ts`
+- `src/stores/search/slice.ts`
+- `src/stores/user/selectors.ts`
+- `src/stores/user/slice.ts`
+- `src/stores/user/thunks.ts`
+
+## Configuration, Schema, And Type Files
 
 - `postcss.config.js`
 - `src/config/index.ts`
@@ -253,27 +130,61 @@
 - `tsconfig.json`
 - `vite.config.ts`
 
-## Tests And Verification Inventory
+## Test And Verification Files
 
-- No test files were categorized
+- No tests were categorized
 
-## Development Workflow Notes
+## Support And Miscellaneous Source Files
 
-- Install path should be checked against package manager metadata before local development: `pnpm@10.7.1`.
-- Build, dev, lint, format, and test tasks are listed exactly as declared in `package.json` when present.
-- No dependency installation or build execution was performed for this documentation pass.
-- Script `dev` is available and may be relevant for local workflow review.
-- Script `build` is available and may be relevant for local workflow review.
-- Script `preview` is available and may be relevant for local workflow review.
-- Script `lint` is available and may be relevant for local workflow review.
-- Script `format` is available and may be relevant for local workflow review.
+- `.github/dependabot.yml`
+- `.prettierrc`
+- `env.d.ts`
+- `index.html`
+- `package.json`
+- `pnpm-lock.yaml`
+- `pnpm-workspace.yaml`
+- `src/App.tsx`
+- `src/icons/LogoIcon.tsx`
+- `src/icons/MenuIcon.tsx`
+- `src/icons/SearchIcon.tsx`
+- `src/icons/index.ts`
+- `src/main.tsx`
+- `src/styles/css/AboutSc.module.css`
+- `src/styles/css/AllProducts.module.css`
+- `src/styles/css/Content-m.module.css`
+- `src/styles/css/HomeM.module.css`
+- `src/styles/css/Inspect.module.css`
+- `src/styles/css/ProductListMobile.module.css`
+- `src/styles/global.css`
+- `src/types/cart.ts`
+- `src/types/core.ts`
+- `src/types/filter.ts`
+- `src/types/index.ts`
+- `src/types/optionsTypes.ts`
+- `src/types/products.ts`
+- `src/types/user.ts`
+- `src/utils/calculateDiscount.ts`
+- `src/utils/format.ts`
+- `src/utils/index.ts`
+- `src/utils/toaster.ts`
+- `src/utils/tw.ts`
+- `src/utils/updateFilter.ts`
+- `src/vite-env.d.ts`
+- `vercel.json`
+
+## Feature-Level Notes
+
+- Files are grouped by path-based feature cues such as `routes`, `pages`, `services`, `controllers`, `features`, and `components`.
+- The inventory is intentionally path-oriented so the document remains faithful to the repository tree.
+- When a behavior is not explicit from file names or config, it is marked as unknown rather than inferred.
+- Frontend repos emphasize pages, routes, UI sections, components, stores, hooks, and API touchpoints.
 
 ## Known Unknowns
 
 - Deployment platform configuration was not explicitly confirmed from a Render manifest
 - No dedicated test files were categorized from the scanned repository tree
 
-## Additional Source Inventory
+## Complete Scanned Source Inventory
 
 - `.github/dependabot.yml`
 - `.prettierrc`

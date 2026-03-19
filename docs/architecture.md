@@ -1,136 +1,27 @@
-# avion-client-react
+# Architecture
 
-## Overview
+## System Overview
 
 - Repository: `avion-client-react`
-- Category: `frontend`
 - Runtime: `Node.js`
 - Primary framework: `React`
 - Rendering or execution model: `Single-page application style client runtime`
-- Package manager metadata: `pnpm@10.7.1`
-- Root directories discovered: `4`
-- Root files discovered: `17`
-- Declared runtime dependencies: `13`
-- Declared development dependencies: `28`
-- Declared scripts: `6`
+- The structure below is based on source folders, configuration files, and declared package metadata.
+- If a relationship is not explicit in code or config, it is left as unknown instead of inferred.
 
-## Repository Summary
+## Architecture Entry Points
 
-- `avion-client-react` is documented from the files present in this repository only.
-- This README intentionally avoids assumptions when implementation details are not explicit.
-- Paths, dependencies, scripts, and configuration notes below are derived from the current repository tree.
-- Unknown or partially confirmed areas are called out explicitly instead of being filled with guesses.
-
-## Script Reference
-
-- `dev`: `vite`
-- `build`: `tsc -b && vite build`
-- `preview`: `vite preview`
-- `lint`: `eslint . --fix`
-- `format`: `prettier --write "src/**/*.{js,ts,tsx,jsx,json,css,md}"`
-- `clean`: `rimraf ./dist`
-
-## Top-Level Directories
-
-- `.github/`
-- `docs/`
-- `public/`
-- `src/`
-
-## Top-Level Files
-
-- `.gitignore`
-- `.npmrc`
-- `.prettierrc`
-- `DOCS.md`
-- `LICENSE.txt`
-- `README.md`
-- `env.d.ts`
-- `index.html`
-- `package.json`
-- `pnpm-lock.yaml`
-- `pnpm-workspace.yaml`
-- `postcss.config.js`
-- `tailwind.config.ts`
-- `tsconfig.json`
-- `tsconfig.tsbuildinfo`
-- `vercel.json`
+- `src/main.tsx`
 - `vite.config.ts`
 
-## Runtime Dependencies
+## Directory Responsibility Map
 
-- `axios`
-- `clsx`
-- `react`
-- `react-dom`
-- `react-error-boundary`
-- `react-hook-form`
-- `react-hot-toast`
-- `react-redux`
-- `react-responsive`
-- `react-router-dom`
-- `reselect`
-- `tailwind-merge`
-- `zod`
+- `.github/`: top-level directory present in the repository
+- `docs/`: top-level directory present in the repository
+- `public/`: top-level directory present in the repository
+- `src/`: top-level directory present in the repository
 
-## Development Dependencies
-
-- `@eslint/js`
-- `@hookform/resolvers`
-- `@reduxjs/toolkit`
-- `@types/node`
-- `@types/react`
-- `@types/react-dom`
-- `@types/react-redux`
-- `@types/react-router-dom`
-- `@typescript-eslint/eslint-plugin`
-- `@typescript-eslint/parser`
-- `@vitejs/plugin-react`
-- `@vitejs/plugin-react-swc`
-- `autoprefixer`
-- `eslint`
-- `eslint-config-prettier`
-- `eslint-plugin-prettier`
-- `eslint-plugin-react`
-- `eslint-plugin-react-hooks`
-- `eslint-plugin-react-refresh`
-- `globals`
-- `postcss`
-- `prettier`
-- `prettier-plugin-tailwindcss`
-- `rimraf`
-- `tailwindcss`
-- `typescript`
-- `typescript-eslint`
-- `vite`
-
-## Environment Variable References
-
-- `MONGO_URI`
-- `NODE_ENV`
-- `VITE_BACKEND_URL`
-- `VITE_BASE_PATH`
-
-## Integration Notes
-
-- Axios is declared for HTTP calls
-- Zod validation is declared
-- React Redux is declared
-
-## Authentication Notes
-
-- Repository contains auth-related source files or routes
-
-## Database And Storage Notes
-
-- Confirmed database/storage implementation is not fully documented in the scanned files
-
-## Primary Source Areas
-
-- `src/` is present
-- `public/` is present
-
-## Route And Entry Inventory
+## Routing, Page, Or Endpoint Layer
 
 - `src/routes/About.tsx`
 - `src/routes/Category.tsx`
@@ -148,46 +39,14 @@
 - `src/services/api/catalog/images.ts`
 - `src/services/api/catalog/index.ts`
 
-## Service And Data Inventory
+## Service, Data, Or Runtime Layer
 
 - `src/services/db/dbClients.ts`
 - `src/services/db/index.ts`
 - `src/services/db/models/Products.ts`
 - `src/services/db/repositories/ProductRepository.ts`
 
-## State, Hook, Or Provider Inventory
-
-- `src/hooks/TrackBreakPointsTW.tsx`
-- `src/hooks/useAuth.ts`
-- `src/hooks/useCart.ts`
-- `src/hooks/useDebouncedSearch.ts`
-- `src/stores/auth/index.ts`
-- `src/stores/auth/selectors.ts`
-- `src/stores/auth/slice.ts`
-- `src/stores/auth/thunks.ts`
-- `src/stores/cart/index.ts`
-- `src/stores/cart/selectors.ts`
-- `src/stores/cart/slice.ts`
-- `src/stores/cart/thunks.ts`
-- `src/stores/core/hooks.ts`
-- `src/stores/core/rootReducer.ts`
-- `src/stores/core/store.ts`
-- `src/stores/modal/index.ts`
-- `src/stores/modal/selectors.ts`
-- `src/stores/modal/slice.ts`
-- `src/stores/modal/thunks.ts`
-- `src/stores/products/index.ts`
-- `src/stores/products/selectors.ts`
-- `src/stores/products/slice.ts`
-- `src/stores/products/thunks.ts`
-- `src/stores/search/index.ts`
-- `src/stores/search/selectors.ts`
-- `src/stores/search/slice.ts`
-- `src/stores/user/selectors.ts`
-- `src/stores/user/slice.ts`
-- `src/stores/user/thunks.ts`
-
-## UI, Module, Or Feature Inventory
+## UI, Module, Or Presentation Layer
 
 - `src/components/badges/AvatarBadge.tsx`
 - `src/components/badges/CartBadge.tsx`
@@ -243,7 +102,7 @@
 - `src/sections/UniqueSection.tsx`
 - `src/sections/WhatsMake.tsx`
 
-## Config, Schema, And Tooling Inventory
+## Configuration And Schema Layer
 
 - `postcss.config.js`
 - `src/config/index.ts`
@@ -253,27 +112,68 @@
 - `tsconfig.json`
 - `vite.config.ts`
 
-## Tests And Verification Inventory
+## State, Hook, Provider, Or Middleware Layer
 
-- No test files were categorized
+- `src/hooks/TrackBreakPointsTW.tsx`
+- `src/hooks/useAuth.ts`
+- `src/hooks/useCart.ts`
+- `src/hooks/useDebouncedSearch.ts`
+- `src/stores/auth/index.ts`
+- `src/stores/auth/selectors.ts`
+- `src/stores/auth/slice.ts`
+- `src/stores/auth/thunks.ts`
+- `src/stores/cart/index.ts`
+- `src/stores/cart/selectors.ts`
+- `src/stores/cart/slice.ts`
+- `src/stores/cart/thunks.ts`
+- `src/stores/core/hooks.ts`
+- `src/stores/core/rootReducer.ts`
+- `src/stores/core/store.ts`
+- `src/stores/modal/index.ts`
+- `src/stores/modal/selectors.ts`
+- `src/stores/modal/slice.ts`
+- `src/stores/modal/thunks.ts`
+- `src/stores/products/index.ts`
+- `src/stores/products/selectors.ts`
+- `src/stores/products/slice.ts`
+- `src/stores/products/thunks.ts`
+- `src/stores/search/index.ts`
+- `src/stores/search/selectors.ts`
+- `src/stores/search/slice.ts`
+- `src/stores/user/selectors.ts`
+- `src/stores/user/slice.ts`
+- `src/stores/user/thunks.ts`
 
-## Development Workflow Notes
+## Data Flow Notes
 
-- Install path should be checked against package manager metadata before local development: `pnpm@10.7.1`.
-- Build, dev, lint, format, and test tasks are listed exactly as declared in `package.json` when present.
-- No dependency installation or build execution was performed for this documentation pass.
-- Script `dev` is available and may be relevant for local workflow review.
-- Script `build` is available and may be relevant for local workflow review.
-- Script `preview` is available and may be relevant for local workflow review.
-- Script `lint` is available and may be relevant for local workflow review.
-- Script `format` is available and may be relevant for local workflow review.
+- The repository is organized around `React` on top of `Node.js`.
+- The detected execution model is `Single-page application style client runtime`.
+- Routes, pages, endpoints, or entry files are listed explicitly in this document when they were detected.
+- Service, library, database, or integration files are separated into their own inventory groups for easier tracing.
+- Configuration, schema, and environment references are documented from source files and root config files.
+- Detected route or endpoint files suggest where requests or page transitions begin.
+- Detected service or data files suggest where business logic or persistence concerns are concentrated.
+- Detected state, provider, hook, or middleware files suggest cross-cutting runtime behavior.
 
-## Known Unknowns
+## External Integration Boundaries
 
-- Deployment platform configuration was not explicitly confirmed from a Render manifest
-- No dedicated test files were categorized from the scanned repository tree
+- Axios is declared for HTTP calls
+- Zod validation is declared
+- React Redux is declared
 
-## Additional Source Inventory
+## Authentication And Access Notes
+
+- Repository contains auth-related source files or routes
+
+## Database And Storage Notes
+
+- Confirmed database/storage implementation is not fully documented in the scanned files
+
+## Deployment And Infrastructure Notes
+
+- Vite configuration file is present
+
+## Architecture Support Inventory
 
 - `.github/dependabot.yml`
 - `.prettierrc`
@@ -418,3 +318,8 @@
 - `tsconfig.json`
 - `vercel.json`
 - `vite.config.ts`
+
+## Known Unknowns
+
+- Deployment platform configuration was not explicitly confirmed from a Render manifest
+- No dedicated test files were categorized from the scanned repository tree
