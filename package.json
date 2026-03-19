@@ -25,7 +25,7 @@
     "react-hot-toast": "^2.5.2",
     "react-redux": "^9.2.0",
     "react-responsive": "^10.0.1",
-    "react-router-dom": "^6.30.0",
+    "react-router-dom": "^7.13.1",
     "reselect": "^5.1.1",
     "tailwind-merge": "^3.2.0",
     "zod": "^3.24.4"
